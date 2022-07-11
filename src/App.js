@@ -24,7 +24,7 @@ function App() {
   return (
     <div className="App">
       <NoteState>
-        <BrowserRouter basename={process.env.PUBLIC_URL}>
+        <BrowserRouter>
           <Navbar />
           <Alert alert={alert} />
           <div className="container">
