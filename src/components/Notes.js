@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 
 const Notes = (props) => {
   const context = useContext(noteContext);
-  const { notes, getNotes, edit } = context;
+  const { notes, getNotes, editNote } = context;
   let navigate = useNavigate();
   useEffect(() => {
     if (localStorage.getItem('token')) {
@@ -35,7 +35,7 @@ const Notes = (props) => {
   });
   const handleClick = (e) => {
     console.log("Updating");
-    edit(note.id, note.etitle, note.edescription, note.etag);
+    editNote(note.id, note.etitle, note.edescription, note.etag);
     refClose.current.click();
     setNote({ etitle: "", edescription: "", etag: "" });
     props.showAlert("Updated", "success");
