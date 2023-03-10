@@ -37,6 +37,7 @@ function Navbar() {
                 Home
               </Link>
             </li>
+         
             <li className="nav-item">
               <Link
                 className={`nav-link $(location.pathname==="/about"? "active": "")`}
